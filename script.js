@@ -1,5 +1,5 @@
 var request = new XMLHttpRequest()
-request.open('GET', 'http://163.172.176.138:2834/statme/api/v1/message/guild/507389389098188820/', true)
+request.open('GET', 'https://statme-api.tk/v1/message/guild/507389389098188820/', true)
 document.addEventListener('DOMContentLoaded', ()=>{
     request.onload = function() {
         if(request.status >= 200 && request.status < 400){
