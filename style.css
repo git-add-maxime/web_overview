@@ -1,7 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:300&display=swap');
+
+@keyframes show {
+    60% {
+        margin-top: -30px;
+        color: #111;
+    }
+    100% {
+        margin-top: 0;
+        color: #fff;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
 }
 
 a, a:hover {
@@ -9,7 +28,8 @@ a, a:hover {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 300;;
     min-height: 100vh;
     background-color: #111;
     color: #fff;
@@ -17,10 +37,28 @@ body {
     border-bottom: 3px solid #ffd900;
 }
 
-header h1 {
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+header {
     padding: 20px;
+    height: 120px;
+}
+
+header h1,
+header h2 {
+    font-size: 26px;
+    text-align: center;
+}
+
+header h1 {
+    background-color: #111;
+    border-bottom: 2px solid #fff;
+}
+
+header h2 {
+    position: relative;
+    z-index: -1;
+    color: #111;
+    margin-top: -30px;
+    animation: show 3s forwards;
 }
 
 body > main,
@@ -49,7 +87,51 @@ body > header {
 }
 
 .discord-style main {
+    height: 384px;
+    padding: 20px;
+    color: #8a8e94;
+    overflow-y: scroll;
+}
+
+.discord-style main h3 {
     font-size: 18px;
     color: #fff;
-    padding: 20px;
+}
+.discord-style main h4 {
+    margin-top: 20px;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.discord-style footer {
+    height: 42px;
+    box-shadow: 0 -1px 18px rgba(0,0,0,.2),0 -1px 0 rgba(0,0,0,.2);
+}
+
+.discord-style footer span {
+    color: #fff;
+    opacity: .1;
+}
+
+.logo {
+    position: absolute;
+    margin-right: 10px;
+    z-index: 1;
+    left: 60px;
+    top: 63px;
+    transform: translate(-50%,-50%);
+    opacity: .5;
+    transition: opacity .3s;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.disk {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #444;
+    color: #fff;
 }
